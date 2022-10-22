@@ -3,7 +3,10 @@ import { S_SaleGoodProduct } from "./CSS_body";
 import { Breadcrumb, Menu, Col, Row, Grid } from "antd";
 import { ListProduct } from "./ListProduct";
 import ItemProduct from "./ItemProduct";
-import btnSale from "../../img/btnSale.png";
+import btnLeft from "../../img/btnLeft.png";
+import btnRight from "../../img/btnRight.png";
+import sale from "../../img/sale.svg";
+import bannerSale from "../../img/bannerSale.svg";
 const SaleGoodProduct = () => {
   return (
     <S_SaleGoodProduct>
@@ -13,14 +16,26 @@ const SaleGoodProduct = () => {
           {ListProduct.map(
             (product, index) =>
               product.typeElement == "SaleGood" && (
-                <Col style={{ position: "relative" }} sm={6}>
-               ``   <img className="btnSale" src={btnSale} alt="" />
+                <Col key={index} style={{ position: "relative" }} sm={6}>
+                  `` <img className="btnSale" src={sale} alt="" />
                   <ItemProduct key={index} product={product} index={index} />
                 </Col>
               )
           )}
         </Row>
       </div>
+      <div className="btnNewProduct">
+        <img src={btnLeft} alt="" />
+        <img src={btnRight} alt="" />
+      </div>
+      <img
+        style={{
+          width: `100%`,
+          marginTop: `68px`,
+        }}
+        src={bannerSale}
+        alt=""
+      />
     </S_SaleGoodProduct>
   );
 };

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 export const S_topHeader = styled.div`
-  background-color: red;
   padding: 0 100px;
   width: 100%;
   height: 150px;
@@ -22,7 +21,7 @@ export const S_navigation = styled.div`
   width: 100%;
   height: 75px;
   padding: 0 350px;
-  background-color: #7a5c5c;
+  background: linear-gradient(180deg, #0097fe 0%, #0097fe 100%);
   /* display: flex; */
   /* align-items: center; */
   .ant-breadcrumb {

@@ -115,12 +115,32 @@ export const S_ItemProduct = styled.div`
 export const S_SaleGoodProduct = styled.div`
   background-color: #ccc;
   padding: 0 160px;
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #0379ca;
+  }
   .btnSale {
     width: 94px;
     height: 45px;
     position: absolute;
     z-index: 10;
-    top: 0;
+    top: 24px;
     left: 3px;
+  }
+  .btnNewProduct {
+    justify-content: end;
+    display: flex;
+    margin-right: 22px;
+    img {
+      &:first-child {
+        width: 56px;
+        height: 56px;
+      }
+      &:last-child {
+        width: 56px;
+        height: 56px;
+      }
+    }
   }
 `;
