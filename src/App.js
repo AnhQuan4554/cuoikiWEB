@@ -6,6 +6,8 @@ import CarouselSlide from "./Pages/header/Carousel";
 import NewProduct from "./Pages/Body/NewProduct";
 import SaleGoodProduct from "./Pages/Body/SaleGoodProduct";
 import NewInfor from "./Pages/inforOther/NewInfor";
+import Review from "./Pages/inforOther/Review";
+import FooterWeb from "./Pages/footer/FooterWeb";
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,8 @@ function App() {
       <NewProduct />
       <SaleGoodProduct />
       <NewInfor />
+      <Review />
+      <FooterWeb />
     </div>
   );
 }
