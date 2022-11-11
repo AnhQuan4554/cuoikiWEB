@@ -168,7 +168,7 @@ export const S_Detail = styled.div`
     height: 640px;
     padding: 50px;
     .imgShowing {
-      width: 349px;
+      width: 100%;
       height: 381px;
       border-radius: 12px;
       margin-bottom: 30px;
@@ -193,7 +193,7 @@ export const S_Detail = styled.div`
   }
   .inforProductDetail {
     width: 517px;
-
+    margin-left: 30px;
     background: #ffffff;
     border-radius: 32px;
     padding: 30px;
@@ -207,6 +207,125 @@ export const S_Detail = styled.div`
     .star {
       height: 21px;
       width: 222px;
+    }
+    p {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      color: #0379ca;
+    }
+    .ram {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .ramItem {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: #ffffff;
+        border: 2px solid #e9e9e9;
+        border-radius: 8px;
+        padding: 4px 20px;
+        &.active {
+          img {
+            display: block;
+          }
+          border-color: #0097fe;
+        }
+        img {
+          display: none;
+          position: absolute;
+          top: -7px;
+          right: -7px;
+        }
+      }
+    }
+    .color {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .colorItem {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        border: 2px solid #e9e9e9;
+        border-radius: 8px;
+        padding: 4px 20px;
+        &.active {
+          img {
+            display: block;
+          }
+          border-color: #0097fe;
+        }
+        span {
+          &:first-child {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color: red;
+            margin-right: 20px;
+          }
+        }
+        img {
+          display: none;
+          position: absolute;
+          top: -7px;
+          right: -7px;
+        }
+      }
+    }
+    .priceText {
+      width: 100%;
+      margin-top: 30px;
+      span {
+        display: block;
+        color: #0097fe;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+      }
+    }
+    .btn {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      button {
+        padding: 6px 20px;
+        color: #fff;
+        background: #0379ca;
+        border-radius: 12px;
+        height: 48px;
+        width: 188px;
+        border: none;
+        font-weight: 400;
+        font-size: 20px;
+      }
+    }
+    .inforDetail {
+      margin-top: 50px;
+      width: 100%;
+      padding: 50px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      font-weight: 400;
+
+      border: 2px solid #e9e9e9;
+      border-radius: 12px;
+      p {
+        color: #989797;
+        font-size: 16px;
+      }
     }
   }
 `;
