@@ -108,6 +108,9 @@ export const S_Review = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        img {
+          width: 100%;
+        }
       }
     }
   }

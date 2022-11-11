@@ -6,8 +6,13 @@ export const S_NewProduct = styled.div`
   h1 {
     margin: 80px 0 80px 0;
     text-align: center;
+    color: #0379ca;
+    /* font-family: 'Open Sans'; */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
   }
-  background-color: green;
 
   .NewProduct_sort {
     background: linear-gradient(
@@ -48,7 +53,6 @@ export const S_NewProduct = styled.div`
 `;
 
 export const S_storeProduct = styled.div`
-  background-color: red;
   position: relative;
   .btnNewProduct {
     justify-content: end;
@@ -68,7 +72,7 @@ export const S_storeProduct = styled.div`
 `;
 export const S_ItemProduct = styled.div`
   width: 262px;
-  height: 300px;
+  min-height: 300px;
   background: #ffffff;
   box-shadow: 0px 1px 13px 9px rgba(0, 151, 254, 0.1);
   border-radius: 12px;
@@ -103,6 +107,11 @@ export const S_ItemProduct = styled.div`
       align-items: center;
       text-align: center;
     }
+    .inforDescribe {
+      color: #b8b8b8;
+      display: block;
+      text-align: center;
+    }
   }
   .addProduct {
     position: absolute;
@@ -113,7 +122,6 @@ export const S_ItemProduct = styled.div`
   }
 `;
 export const S_SaleGoodProduct = styled.div`
-  background-color: #ccc;
   padding: 0 160px;
   h1 {
     font-size: 36px;
@@ -141,6 +149,64 @@ export const S_SaleGoodProduct = styled.div`
         width: 56px;
         height: 56px;
       }
+    }
+  }
+`;
+export const S_Detail = styled.div`
+  background: #f5f5f7;
+  box-shadow: 0px 4px 12px 6px rgba(25, 32, 91, 0.15);
+  border-radius: 32px 0px 0px 32px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .productDetail {
+    background: #ffffff;
+    border-radius: 32px;
+    width: 520px;
+    height: 640px;
+    padding: 50px;
+    .imgShowing {
+      width: 349px;
+      height: 381px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .choseProduct {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 88px;
+      width: 100%;
+      img {
+        height: 100%;
+        border: 3px solid #d5eeff;
+        border-radius: 12px;
+      }
+    }
+  }
+  .inforProductDetail {
+    width: 517px;
+
+    background: #ffffff;
+    border-radius: 32px;
+    padding: 30px;
+    h2 {
+      color: #0379ca;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    .star {
+      height: 21px;
+      width: 222px;
     }
   }
 `;

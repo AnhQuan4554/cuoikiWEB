@@ -6,17 +6,19 @@ import sam1 from "../../img/products/Samsung1.png";
 import sam2 from "../../img/products/Samsung2.png";
 import sam3 from "../../img/products/Samsung3.png";
 import sam4 from "../../img/products/Samsung4.png";
+import lap1 from "../../img/laptop/lap1.png";
+import lap2 from "../../img/laptop/lap2.png";
+
 export const ListProduct = [
   {
     id: 0,
-    name: `Iphone 13`,
+    name: `Apple iPhone 13 - Chính hãng VN/A`,
     nameCompany: "Apple",
     typeProduct: "Phone",
     typeElement: "NewProduct",
-    price: `
-    13.000.000`,
+    price: `13.000.000`,
     image: phone1,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 1,
@@ -27,7 +29,7 @@ export const ListProduct = [
     price: `
     13.000.000`,
     image: phone2,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 2,
@@ -38,7 +40,7 @@ export const ListProduct = [
     price: `
     13.000.000`,
     image: phone3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 3,
@@ -46,10 +48,9 @@ export const ListProduct = [
     nameCompany: "Apple",
     typeProduct: "Phone",
     typeElement: "NewProduct",
-    price: `
-    13.000.000`,
+    price: 13000000,
     image: phone4,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 4,
@@ -60,7 +61,7 @@ export const ListProduct = [
     price: `
     13.000.000`,
     image: sam1,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 5,
@@ -71,7 +72,7 @@ export const ListProduct = [
     price: `
     13.000.000`,
     image: sam2,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 6,
@@ -81,20 +82,20 @@ export const ListProduct = [
     typeElement: "NewProduct",
     price: `
     13.000.000`,
-    image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    image: lap1,
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 8,
     name: `Iphone 13`,
     nameCompany: "Apple",
     typeProduct: "Laptop",
-    typeElement: "SaleGood",
+    typeElement: "NewProduct",
     percentSale: "30%",
     price: `
     13.000.000`,
-    image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    image: lap2,
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 9,
@@ -105,8 +106,8 @@ export const ListProduct = [
     percentSale: "30%",
     price: `
     13.000.000`,
-    image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    image: lap1,
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 10,
@@ -116,8 +117,8 @@ export const ListProduct = [
     typeElement: "SaleGood",
     percentSale: "30%",
     price: `13.000.000`,
-    image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    image: lap2,
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 11,
@@ -127,8 +128,8 @@ export const ListProduct = [
     typeElement: "SaleGood",
     percentSale: "30%",
     price: `13.000.000`,
-    image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    image: lap1,
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 12,
@@ -139,7 +140,7 @@ export const ListProduct = [
     percentSale: "30%",
     price: `13.000.000`,
     image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 13,
@@ -150,7 +151,7 @@ export const ListProduct = [
     percentSale: "30%",
     price: `13.000.000`,
     image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 14,
@@ -161,7 +162,7 @@ export const ListProduct = [
     percentSale: "30%",
     price: `13.000.000`,
     image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 15,
@@ -172,7 +173,7 @@ export const ListProduct = [
     percentSale: "30%",
     price: `13.000.000`,
     image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 16,
@@ -183,7 +184,7 @@ export const ListProduct = [
     percentSale: "30%",
     price: `13.000.000`,
     image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 17,
@@ -194,7 +195,7 @@ export const ListProduct = [
     percentSale: "30%",
     price: `13.000.000`,
     image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
   {
     id: 18,
@@ -205,6 +206,6 @@ export const ListProduct = [
     percentSale: "30%",
     price: `13.000.000`,
     image: sam3,
-    describe: "Sản phẩm rất tuuyeetj .....",
+    describe: "Giá đã bao gồm 10% VAT",
   },
 ];

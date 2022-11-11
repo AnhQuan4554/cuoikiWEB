@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { S_NewProduct, S_storeProduct } from "./CSS_body";
 import { Breadcrumb, Menu, Col, Row, Grid } from "antd";
 import { ListProduct } from "./ListProduct";
@@ -8,6 +8,7 @@ import btnRight from "../../img/btnRight.png";
 import ItemProduct from "./ItemProduct";
 ////////////////////////////////////////////////
 const NewProduct = () => {
+  const [typeProduct, setTypeProduct] = useState("Phone");
   const menu = (
     <Menu
       items={[
@@ -26,7 +27,7 @@ const NewProduct = () => {
       ]}
     />
   );
-  const typeProduct = (
+  const typeCategory = (
     <Menu
       items={[
         {
@@ -40,21 +41,22 @@ const NewProduct = () => {
       ]}
     />
   );
+
   return (
     <S_NewProduct>
       <h1 className="tittle">Các dòng sản phẩm mới nhất</h1>
       <div className="NewProduct_sort">
         <Breadcrumb separator="">
-          <Breadcrumb.Item>
+          <Breadcrumb.Item onClick={() => setTypeProduct("Phone")}>
             <a className="btnSort">Điện thoại</a>
           </Breadcrumb.Item>
-          <Breadcrumb.Item>
+          <Breadcrumb.Item onClick={() => setTypeProduct("Laptop")}>
             <a className="btnSort">Máy tính</a>
           </Breadcrumb.Item>
           <Breadcrumb.Item overlay={menu}>
             <a className="btnSort">Giá</a>
           </Breadcrumb.Item>
-          <Breadcrumb.Item overlay={typeProduct}>
+          <Breadcrumb.Item overlay={typeCategory}>
             <a className="btnSort">Hãng</a>
           </Breadcrumb.Item>
         </Breadcrumb>
@@ -64,8 +66,9 @@ const NewProduct = () => {
         <Row style={{ marginBottom: `20px` }} gutter={[10, 30]}>
           {ListProduct.map(
             (product, index) =>
-              product.typeElement == "NewProduct" && (
-                <Col sm={6}>
+              // product.typeElement == "NewProduct" &&
+              product.typeProduct == `${typeProduct}` && (
+                <Col key={index} xs={8} lg={6}>
                   <ItemProduct key={index} product={product} index={index} />
                 </Col>
               )
