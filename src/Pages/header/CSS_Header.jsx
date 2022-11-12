@@ -58,7 +58,7 @@ export const S_inforExtra = styled.div`
 `;
 
 export const S_contact = styled.div`
-  padding: 0 200px;
+  padding: 0 240px;
   display: flex;
   align-items: center;
   justify-content: space-between;

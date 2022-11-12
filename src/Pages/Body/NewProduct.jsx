@@ -9,6 +9,11 @@ import ItemProduct from "./ItemProduct";
 ////////////////////////////////////////////////
 const NewProduct = () => {
   const [typeProduct, setTypeProduct] = useState("Phone");
+  const toggleClass = (e) => {
+    const act = document.querySelector(".btnSort.active");
+    act && act.classList.remove("active");
+    e.currentTarget.classList.toggle("active");
+  };
   const menu = (
     <Menu
       items={[
@@ -48,16 +53,24 @@ const NewProduct = () => {
       <div className="NewProduct_sort">
         <Breadcrumb separator="">
           <Breadcrumb.Item onClick={() => setTypeProduct("Phone")}>
-            <a className="btnSort">Điện thoại</a>
+            <a onClick={(e) => toggleClass(e)} className="btnSort active">
+              Điện thoại
+            </a>
           </Breadcrumb.Item>
           <Breadcrumb.Item onClick={() => setTypeProduct("Laptop")}>
-            <a className="btnSort">Máy tính</a>
+            <a onClick={(e) => toggleClass(e)} className="btnSort">
+              Máy tính
+            </a>
           </Breadcrumb.Item>
           <Breadcrumb.Item overlay={menu}>
-            <a className="btnSort">Giá</a>
+            <a onClick={(e) => toggleClass(e)} className="btnSort">
+              Giá
+            </a>
           </Breadcrumb.Item>
           <Breadcrumb.Item overlay={typeCategory}>
-            <a className="btnSort">Hãng</a>
+            <a onClick={(e) => toggleClass(e)} className="btnSort">
+              Hãng
+            </a>
           </Breadcrumb.Item>
         </Breadcrumb>
       </div>

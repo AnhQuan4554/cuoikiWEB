@@ -34,6 +34,11 @@ export const S_NewProduct = styled.div`
           }
           .btnSort {
             color: #000;
+            font-weight: 500;
+            font-size: 18px;
+            &.active {
+              color: #1890ff;
+            }
           }
           // của riêng cái drop
           span {
@@ -54,6 +59,7 @@ export const S_NewProduct = styled.div`
 
 export const S_storeProduct = styled.div`
   position: relative;
+  margin-top: 30px;
   .btnNewProduct {
     justify-content: end;
     display: flex;
@@ -77,6 +83,14 @@ export const S_ItemProduct = styled.div`
   box-shadow: 0px 1px 13px 9px rgba(0, 151, 254, 0.1);
   border-radius: 12px;
   position: relative;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+    & .imgProduct {
+      transform: scale(1.2);
+      transition: all 0.4s linear;
+    }
+  }
   .imgCart {
     width: 36px;
     height: 36px;
