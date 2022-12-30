@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { S_bottom, S_Detail, S_HoangDuong } from "./CSS_body";
 import Iphone1 from "../../img/products/Iphone1.png";
 import Iphone2 from "../../img/products/Iphone2.png";
@@ -19,6 +19,9 @@ import {
 } from "react-icons/ai";
 const Detail = () => {
   const [priceProduct, setpriceProduct] = useState("19.000.000 đ");
+  const [priceNum, setpriceNum] = useState(19);
+  const [number, setNumber] = useState(1);
+
   const handleChoseRam = (e) => {
     const act = document.querySelector(".ramItem.active");
     act && act.classList.remove("active");
@@ -44,6 +47,10 @@ const Detail = () => {
   const handlePrice = (e) => {
     setpriceProduct(e.currentTarget.textContent);
   };
+  useEffect(() => {
+    const x = priceProduct.split(".")[0];
+    setpriceNum(x);
+  }, priceProduct);
   return (
     <>
       <Navigation />
@@ -97,9 +104,9 @@ const Detail = () => {
               <img src={choseColor} alt="" />
             </div>
           </div>
-          <div className="priceText">
-            <span>{priceProduct}</span>
-          </div>
+          {/* <div className="priceText">
+            <span>{}</span>
+          </div> */}
           {/* <div className="btn">
             <button>Mua ngay</button>
             <button>Thêm vào giỏ</button>
@@ -114,32 +121,44 @@ const Detail = () => {
           </div> */}
           {/* Hoang Duong */}
           <S_HoangDuong>
-            <h2 class="title3">Lựa chọn số lượng</h2>
-            <div class="rightProduct_info-amount">
-              <div class="rightProduct_info-choose">
-                <AiOutlinePlus class="addButton" />
-                <p class="amountNumber">1</p>
-                <AiOutlineMinus class="addButton" />
+            <h2 className="title3">Lựa chọn số lượng</h2>
+            <div className="rightProduct_info-amount">
+              <div className="rightProduct_info-choose">
+                <AiOutlinePlus
+                  onClick={() => {
+                    setNumber((num) => num + 1);
+                  }}
+                  className="addButton"
+                />
+                <p className="amountNumber">{number}</p>
+                <AiOutlineMinus
+                  onClick={() => {
+                    number > 1 && setNumber((num) => num - 1);
+                  }}
+                  className="addButton"
+                />
               </div>
-              <div class="rightProduct_info-tax">
-                <p class="variablePrice">Giá: 13.690.000đ</p>
-                <p class="variableTax">Thuế gia tăng: 10%</p>
+              <div className="rightProduct_info-tax">
+                <p className="variablePrice">Giá: {priceProduct}</p>
+                <p className="variableTax">Thuế gia tăng: 10%</p>
               </div>
             </div>
-            <div class="resumeLine"></div>
-            <div class="resumePrice">
-              <span class="resumePrice-title">Giá tổng cộng</span>
-              <h1 class="resumePrice-price">15.059.000₫</h1>
+            <div className="resumeLine"></div>
+            <div className="resumePrice">
+              <span className="resumePrice-title">Giá tổng cộng</span>
+              <h1 className="resumePrice-price">{`${
+                priceNum * number
+              }.000.000 đ`}</h1>
             </div>
-            <div class="purchaseButton">
-              <button class="purchaseButton-buy">Mua ngay</button>
-              <button class="purchaseButton-addToCast">
-                <p class="name">Thêm vào giỏ hàng</p>
-                <AiOutlineShoppingCart class="cast" />
+            <div className="purchaseButton">
+              <button className="purchaseButton-buy">Mua ngay</button>
+              <button className="purchaseButton-addToCast">
+                <p className="name">Thêm vào giỏ hàng</p>
+                <AiOutlineShoppingCart className="cast" />
               </button>
-              <img class="banner" src={Frame} alt="" />
+              <img className="banner" src={Frame} alt="" />
             </div>
-            <div class="itemInfomation">
+            <div className="itemInfomation">
               <h2>Mô tả sản phẩm</h2>
               <ul style={{ color: " #9899a1" }}>
                 <li>
@@ -223,55 +242,59 @@ const Detail = () => {
         </div>
       </S_Detail>
       <S_bottom>
-        <div class="bottomFeedback">
-          <div class="bottomFeedback-review">
+        <div className="bottomFeedback">
+          <div className="bottomFeedback-review">
             <h2>Phản hồi và đánh giá</h2>
-            <div class="circularProgress">
-              <span class="circularProgress-value">4.8</span>
+            <div className="circularProgress">
+              <span className="circularProgress-value">4.8</span>
             </div>
-            <div class="bottomFeedback-vote">
+            <div className="bottomFeedback-vote">
               <img src="./Images/star.png" alt="" />
               <span>4.8/5</span>
             </div>
-            <div class="bar">
-              <div class="bottomFeedback-votebar">
-                <span class="voteLevel"> Tuyệt vời </span>
-                <div class="voteBar"></div>
-                <span class="votePeople"> 50 đánh giá </span>
+            <div className="bar">
+              <div className="bottomFeedback-votebar">
+                <span className="voteLevel"> Tuyệt vời </span>
+                <div className="voteBar"></div>
+                <span className="votePeople"> 50 đánh giá </span>
               </div>
-              <div class="bottomFeedback-votebar">
-                <span class="voteLevel"> Rất Tốt </span>
-                <div class="voteBar"></div>
-                <span class="votePeople"> 50 đánh giá </span>
+              <div className="bottomFeedback-votebar">
+                <span className="voteLevel"> Rất Tốt </span>
+                <div className="voteBar"></div>
+                <span className="votePeople"> 50 đánh giá </span>
               </div>
-              <div class="bottomFeedback-votebar">
-                <span class="voteLevel"> Hài lòng</span>
-                <div class="voteBar"></div>
-                <span class="votePeople"> 50 đánh giá </span>
+              <div className="bottomFeedback-votebar">
+                <span className="voteLevel"> Hài lòng</span>
+                <div className="voteBar"></div>
+                <span className="votePeople"> 50 đánh giá </span>
               </div>
-              <div class="bottomFeedback-votebar">
-                <span class="voteLevel"> Trung bình </span>
-                <div class="voteBar"></div>
-                <span class="votePeople"> 50 đánh giá </span>
+              <div className="bottomFeedback-votebar">
+                <span className="voteLevel"> Trung bình </span>
+                <div className="voteBar"></div>
+                <span className="votePeople"> 50 đánh giá </span>
               </div>
-              <div class="bottomFeedback-votebar">
-                <span class="voteLevel"> Rất kém </span>
-                <div class="voteBar"></div>
-                <span class="votePeople"> 50 đánh giá </span>
+              <div className="bottomFeedback-votebar">
+                <span className="voteLevel"> Rất kém </span>
+                <div className="voteBar"></div>
+                <span className="votePeople"> 50 đánh giá </span>
               </div>
             </div>
           </div>
-          <div class="bottomFeedback-image">
+          <div className="bottomFeedback-image">
             <h2>Ảnh và video từ người mua hàng</h2>
-            <div class="listImage">
-              <img src={Duong1} alt="" class="imageItem" />
-              <img src={Duong2} alt="" class="imageItem" />
-              <img src={Duong3} alt="" class="imageItem" />
+            <div className="listImage">
+              <img src={Duong1} alt="" className="imageItem" />
+              <img src={Duong2} alt="" className="imageItem" />
+              <img src={Duong3} alt="" className="imageItem" />
             </div>
-            <div class="listImage">
-              <img src={Duong4} alt="" class="imageItem" />
-              <img src={Duong5} alt="" class="imageItem" />
-              <img src="./Images/Group 34261.png" alt="" class="imageItem" />
+            <div className="listImage">
+              <img src={Duong4} alt="" className="imageItem" />
+              <img src={Duong5} alt="" className="imageItem" />
+              <img
+                src="./Images/Group 34261.png"
+                alt=""
+                className="imageItem"
+              />
             </div>
           </div>
         </div>
