@@ -3,7 +3,8 @@ import { cssTransition } from "react-toastify";
 import "./Sign_in.css";
 import { Link, useNavigate } from "react-router-dom";
 import Home from "../../../Home";
-
+import imgSigin from "../../../img/signin/imgSigin.svg";
+import Register from "../register/Register";
 const Sign_in = () => {
   ////
   const defauUser = {
@@ -35,19 +36,29 @@ const Sign_in = () => {
   };
   return (
     <div className="wrapSign_in">
+      <img
+        style={{ objectFit: `cover`, maxHeight: `100vh`, width: `700px` }}
+        src={imgSigin}
+        alt=""
+      />
       <form /* onSubmit={handleSub} */ className="Sign_in">
         <h2
           style={{
             color: "#0379ca",
             textAlign: " center",
             marginBottom: `16px`,
+            fontWeight: `600`,
+            fontSize: `48px`,
           }}
         >
-          Sign In
+          Đăng Nhập
         </h2>
+        <p className="tittleP">
+          Đăng nhập tài khoản Infinitec của bạn để nhận những thông báo mới nhất
+        </p>
         <div className="Sign_in_input">
           <label htmlFor="userInput">
-            <p>Họ và tên</p>
+            <p>Email / Số điện thoại</p>
           </label>
           <input
             onChange={(e) =>
@@ -73,24 +84,21 @@ const Sign_in = () => {
             id="password"
           />
         </div>
-        <button
-          type="submit"
-          style={{
-            background: `#0379ca`,
-            padding: "8px 18px",
-            color: `#fff`,
-            border: "none",
-            borderRadius: `6px`,
-            cursor: `pointer`,
-            marginLeft: `50%`,
-            transform: "translateX(-50%)",
-          }}
+        <div className="wrapBtn">
+          <button className="btn" type="submit">
+            Đăng nhập
+          </button>
+          <button className="btnGoogle" type="submit">
+            Đăng nhập với Google
+          </button>
+        </div>
+        <Link
+          style={{ color: "#808080" }}
+          to="/Register"
+          className="nav-link home"
         >
-          Đăng nhập
-        </button>
-
-        <Link to="/" className="nav-link home">
-          Trang chủ
+          Bạn chưa có tài khoản?{" "}
+          <span style={{ color: "#0097FE" }}>Đăng Ký</span>
         </Link>
       </form>
     </div>
