@@ -168,7 +168,7 @@ export const S_SaleGoodProduct = styled.div`
 `;
 export const S_Detail = styled.div`
   background: #f5f5f7;
-  width: 100vw;
+  width: 100%;
   display: flex;
   padding-top: 40px;
   justify-content: center;
@@ -468,35 +468,6 @@ export const S_HoangDuong = styled.div`
     margin-top: 32px;
   }
 
-  .circularProgress {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    border-radius: 50%;
-    background: conic-gradient(#0097fe 340deg, #dcdcdc 20deg);
-    z-index: -3;
-  }
-  .circularProgress::before {
-    content: "";
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    transform: translate(5%, 5%);
-    z-index: -1;
-  }
-  .circularProgress-value {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 64px;
-    font-weight: bold;
-    color: #0097fe;
-    transform: translateY(60%);
-    z-index: 10;
-  }
-
   .bottomFeedback {
     margin: 36px 0 80px 0;
     display: flex;
@@ -544,12 +515,39 @@ export const S_bottom = styled.div`
   display: flex;
   justify-content: center;
   background: #f5f5f7;
+
+  .circularProgress {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    background: conic-gradient(#0097fe 340deg, #dcdcdc 20deg);
+  }
+  .circularProgress::before {
+    content: "";
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(5%, 5%);
+  }
+  .circularProgress-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: #0097fe;
+    transform: translateY(60%);
+    z-index: 10;
+  }
   .bottomFeedback {
     background-color: #fff;
     margin: 36px 0 80px 0;
     display: flex;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     padding: 50px 100px;
   }
   .bottomFeedback-vote {

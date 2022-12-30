@@ -5,8 +5,6 @@ import { S_ItemProduct } from "./CSS_body";
 import cart from "../../img/cart.png";
 import addProduct from "../../img/addProduct.png";
 import { useNavigate } from "react-router-dom";
-import Detail from "./Detail";
-// import Sign_in from "../header/signin/Sign_in";
 const ItemProduct = ({ product, index }) => {
   let navigate = useNavigate();
   const showProduct = () => {

@@ -36,11 +36,7 @@ const Sign_in = () => {
   };
   return (
     <div className="wrapSign_in">
-      <img
-        style={{ objectFit: `cover`, maxHeight: `100vh`, width: `700px` }}
-        src={imgSigin}
-        alt=""
-      />
+      <img className="imgMain" src={imgSigin} alt="" />
       <form /* onSubmit={handleSub} */ className="Sign_in">
         <h2
           style={{

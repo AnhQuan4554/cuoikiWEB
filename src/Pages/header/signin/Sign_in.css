@@ -8,6 +8,11 @@
   height: 100vh; */
   display: flex;
 }
+.imgMain {
+  object-fit: cover;
+  max-height: 100vh;
+  width: 700px;
+}
 .wrapImg {
   width: 58%;
   max-height: 100vh;

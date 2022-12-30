@@ -10,6 +10,7 @@ import Duong2 from "../../img/products/Duong2.png";
 import Duong3 from "../../img/products/Duong3.png";
 import Duong4 from "../../img/products/Duong4.png";
 import Duong5 from "../../img/products/Duong5.svg";
+import star1 from "../../img/products/star.svg";
 import star from "../../img/star.svg";
 import Navigation from "../header/Navigation";
 import {
@@ -48,11 +49,10 @@ const Detail = () => {
     setpriceProduct(e.currentTarget.textContent);
   };
   useEffect(() => {
-    const x = priceProduct.split(".")[0];
-    setpriceNum(x);
+    setpriceNum(priceProduct.split(".")[0]);
   }, priceProduct);
   return (
-    <>
+    <div>
       <Navigation />
       <S_Detail>
         <div className="productDetail">
@@ -104,21 +104,7 @@ const Detail = () => {
               <img src={choseColor} alt="" />
             </div>
           </div>
-          {/* <div className="priceText">
-            <span>{}</span>
-          </div> */}
-          {/* <div className="btn">
-            <button>Mua ngay</button>
-            <button>Thêm vào giỏ</button>
-          </div> */}
-          {/* <div className="inforDetail">
-            <p>
-              Công nghệ màn hình: IPS LCD Độ phân giải: 828 x 1792 Pixels Màn
-              hình rộng: 6.1" Độ phân giải: 2 camera 12 MP, 12 MP Hệ điều hành:
-              iOS 15 Chip xử lý (CPU): Apple A13 Bionic 6 nhân Mạng di động: Hỗ
-              trợ 4G Số khe sim: 1 Nano SIM & 1 eSIM Dung lượng pin: 3110 mAh
-            </p>
-          </div> */}
+
           {/* Hoang Duong */}
           <S_HoangDuong>
             <h2 className="title3">Lựa chọn số lượng</h2>
@@ -249,7 +235,7 @@ const Detail = () => {
               <span className="circularProgress-value">4.8</span>
             </div>
             <div className="bottomFeedback-vote">
-              <img src="./Images/star.png" alt="" />
+              <img src={star1} alt="" />
               <span>4.8/5</span>
             </div>
             <div className="bar">
@@ -299,7 +285,7 @@ const Detail = () => {
           </div>
         </div>
       </S_bottom>
-    </>
+    </div>
   );
 };
 
