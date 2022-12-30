@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapSign_in {
+  /* width: 100vw;
+    height: 100vh; */
+  display: flex;
+}
+.imgMain {
+  object-fit: cover;
+  max-height: 100vh;
+  width: 700px;
+}
+.wrapImg {
+  width: 58%;
+  max-height: 100vh;
+}
+.wrapSign_in .Sign_in {
+  width: 100%;
+  padding: 50px 150px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.Sign_in .Sign_in_input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  color: #666;
+  margin-bottom: 25px;
+}
+.tittleP {
+  font-weight: 400;
+  font-size: 24px;
+
+  color: #0379ca;
+}
+.Sign_in input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #888;
+  font-size: 15px;
+  padding: 10px 5px;
+  background-color: #fff;
+  border: 2px solid #81bce4;
+  border-radius: 8px;
+}
+.button_Register {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 118px;
+  margin-top: 40px;
+}
+.button_Register button {
+  padding: 8px 18px;
+  color: #fff;
+  border: none;
+  background: #c83c85;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.button_Register a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.home {
+  display: block;
+  text-align: center;
+  margin-top: 26px;
+  font-size: 20px;
+}
+.wrapBtn {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  width: 100%;
+  background: #0097fe;
+  padding: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 88%;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.btnGoogle {
+  width: 100%;
+
+  background-color: #fff;
+  padding: 14px;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 88%;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 20px;
+
+  border: 2px solid #81bce4;
+  border-radius: 11px;
+}
