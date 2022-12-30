@@ -168,12 +168,9 @@ export const S_SaleGoodProduct = styled.div`
 `;
 export const S_Detail = styled.div`
   background: #f5f5f7;
-  box-shadow: 0px 4px 12px 6px rgba(25, 32, 91, 0.15);
-  border-radius: 32px 0px 0px 32px;
   width: 100vw;
-  height: 100vh;
   display: flex;
-  align-items: center;
+  padding-top: 40px;
   justify-content: center;
   .productDetail {
     background: #ffffff;
@@ -341,5 +338,256 @@ export const S_Detail = styled.div`
         font-size: 16px;
       }
     }
+  }
+`;
+export const S_HoangDuong = styled.div`
+  .title3 {
+    margin-top: 40px;
+    /* background-color: red; */
+  }
+  .rightProduct_info-choose {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 192px;
+    justify-content: space-around;
+    border: 1.5px solid #9899a1;
+    border-radius: 16px;
+  }
+  .rightProduct_info-amount {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .amountNumber {
+    font-size: 40px;
+    font-weight: 600 !important;
+    margin: 0;
+    font-size: 24px !important;
+  }
+  .minusButton {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    padding: 0px;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    border: 1px solid #f4f4f4;
+  }
+  .addButton {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    padding: 0px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #f4f4f4;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+  .resumeLine {
+    width: 100%;
+    height: 3px;
+    background-color: #9899a1;
+    opacity: 0.3;
+    margin-top: 36px;
+  }
+
+  .resumePrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .resumePrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .resumePrice-title {
+    font-size: 20px;
+    color: #9899a1;
+  }
+  .resumePrice-price {
+    font-size: 40px;
+    color: #0097fe;
+  }
+
+  .purchaseButton-buy {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    background-color: #0097fe;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .purchaseButton-buy:hover {
+    background-color: #0379ca;
+    transition: all 0.25s ease;
+  }
+  .purchaseButton-addToCast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #0097fe;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border: 2px solid #0097fe;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .name {
+    font-size: 24px;
+    font-weight: 500;
+    color: #0097fe;
+    margin-bottom: 0;
+  }
+
+  .cast {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    text-align: center;
+    margin-left: 8px;
+  }
+
+  .banner {
+    width: 100%;
+    height: 106px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 32px;
+  }
+
+  .circularProgress {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    background: conic-gradient(#0097fe 340deg, #dcdcdc 20deg);
+    z-index: -3;
+  }
+  .circularProgress::before {
+    content: "";
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(5%, 5%);
+    z-index: -1;
+  }
+  .circularProgress-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: #0097fe;
+    transform: translateY(60%);
+    z-index: 10;
+  }
+
+  .bottomFeedback {
+    margin: 36px 0 80px 0;
+    display: flex;
+  }
+  .bottomFeedback-vote {
+    display: flex;
+    align-items: center;
+    margin: 24px 0 24px 0;
+    gap: 12px;
+  }
+  .bottomFeedback-votebar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 12px;
+    justify-content: space-between;
+  }
+  .bottomFeedback-review {
+    margin-right: 72px;
+  }
+
+  .voteBar {
+    width: 280px;
+    height: 12px;
+    border-radius: 6px;
+    background-image: linear-gradient(90deg, #0097fe 60%, #e6e6e6 40%);
+  }
+
+  .voteLevel {
+    font-weight: 600;
+    font-size: 16px;
+    color: #0097fe;
+  }
+
+  .bar {
+    width: 548px;
+  }
+
+  .imageItem {
+    margin-right: 32px;
+    margin-bottom: 24px;
+  }
+`;
+export const S_bottom = styled.div`
+  display: flex;
+  justify-content: center;
+  background: #f5f5f7;
+  .bottomFeedback {
+    background-color: #fff;
+    margin: 36px 0 80px 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 50px 100px;
+  }
+  .bottomFeedback-vote {
+    display: flex;
+    align-items: center;
+    margin: 24px 0 24px 0;
+    gap: 12px;
+  }
+  .bottomFeedback-votebar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 12px;
+    justify-content: space-between;
+  }
+  .bottomFeedback-review {
+    margin-right: 72px;
+  }
+
+  .voteBar {
+    width: 280px;
+    height: 12px;
+    border-radius: 6px;
+    background-image: linear-gradient(90deg, #0097fe 60%, #e6e6e6 40%);
+  }
+
+  .voteLevel {
+    font-weight: 600;
+    font-size: 16px;
+    color: #0097fe;
+  }
+
+  .bar {
+    width: 548px;
+  }
+
+  .imageItem {
+    margin-right: 32px;
+    margin-bottom: 24px;
   }
 `;
